@@ -32,7 +32,7 @@ Below is the connection diagram for the Arduino radar setup:
 
 ---
 
-## 🔌 Physical View
+## 🖼️ Physical View
 
 Mount the HC-SR04 Ultrasonic Sensor on top of the SG90 Servo Motor using rubber bands as shown below. The sensor will scan a 180&deg; field as the servo rotates:
 
