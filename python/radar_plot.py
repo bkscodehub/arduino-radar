@@ -6,8 +6,8 @@ from collections import deque
 import imageio
 import platform
 
-from serial import Serial
-#from mock_serial import MockSerial  # Replace with Serial(...) for real data
+#from serial import Serial
+from mock_serial import MockSerial  # Replace with Serial(...) for real data
 
 # Configuration
 RANGE_MAX = 500  # cm
@@ -26,8 +26,8 @@ def play_beep():
         os.system('play -nq -t alsa synth 0.1 sine 880')  # Linux/Mac
 
 # Serial Setup
-ser = Serial('COM5', 9600, timeout=1)
-#ser = MockSerial()
+#ser = Serial('COM5', 9600, timeout=1)
+ser = MockSerial()
 time.sleep(2)
 
 # Radar Plot Setup

@@ -17,7 +17,7 @@ class MockSerial:
         self.angle += self.direction
 
         # Simulate distance: e.g., a sine wave + some noise
-        distance = 50 + 300 * math.sin(math.radians(self.angle)) + random.uniform(-3, 3)
+        distance = 20 + 300 * math.sin(math.radians(self.angle)) + random.uniform(-3, 3)
         distance = max(1, min(500, int(distance)))
 
         data_str = f"{self.angle},{distance}\n"
