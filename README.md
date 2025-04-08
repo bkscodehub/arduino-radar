@@ -57,7 +57,7 @@ Then run the radar UI:
 ```
 python radar_plot.py
 ```
-For testing without Arduino, use the included mock_serial.py.
+For testing without Arduino, use the included `mock_serial.py`.
 
 ---
 
