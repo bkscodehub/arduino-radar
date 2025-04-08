@@ -99,7 +99,7 @@ Captures frames and saves output as a .gif for demonstrations
 ---
 
 ## ⚙️ Customization
-Change sweep speed, fade time, or detection threshold in radar_display.py
+Change sweep speed, fade time, or detection threshold in `radar_plot.py`
 
 Modify sound settings based on your OS
 
