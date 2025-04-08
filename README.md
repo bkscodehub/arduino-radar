@@ -10,6 +10,28 @@ A mini radar project using an Arduino UNO R4 Minima, an ultrasonic sensor mounte
 
 ---
 
+## 🔌 Circuit Diagram
+
+Below is the connection diagram for the Arduino radar setup:
+
+![Circuit Diagram](media/circuit-view.jpg)
+
+### Connections
+
+| Component         | Arduino Pin   | Notes                           |
+|------------------|---------------|----------------------------------|
+| Ultrasonic VCC   | 5V            | Power                            |
+| Ultrasonic GND   | GND           | Ground                           |
+| Ultrasonic TRIG  | D9            | Can be changed in code           |
+| Ultrasonic ECHO  | D10           | Can be changed in code           |
+| Servo Motor PWM  | D6            | Servo control signal             |
+| Servo VCC        | 5V            | Use external 5V if needed        |
+| Servo GND        | GND           | Common ground with Arduino       |
+
+> 💡 Tip: Use a breadboard and jumper wires to keep the connections clean and secure.
+
+---
+
 ## 📁 Project Structure
 ```
 arduino-radar/
