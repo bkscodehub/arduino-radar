@@ -16,9 +16,9 @@ arduino-radar/
 ├── arduino/                # Arduino sketch 
 │   └── radar.ino 
 ├── python/                 # Python radar display 
-│   ├── src
-│   │   ├── radar_display.py
-│   │   ├── mock_serial.py
+│   ├── radar_plot.py
+│   ├── my-radar.py         # Basic radar plot 
+│   ├── mock_serial.py
 │   └── requirements.txt
 ├── media/
 │   └── radar_demo.gif
@@ -52,13 +52,12 @@ Install dependencies:
 ```bash
 cd python
 pip install -r requirements.txt
-
-Then run the radar UI:
-python radar_display.py
-
-For testing without Arduino, use the included mock_serial.py.
-
 ```
+Then run the radar UI:
+```
+python radar_plot.py
+```
+For testing without Arduino, use the included mock_serial.py.
 
 ---
 
