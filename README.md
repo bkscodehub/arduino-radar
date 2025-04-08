@@ -18,32 +18,43 @@ Below is the connection diagram for the Arduino radar setup:
 
 ### Connections
 
-| Component         | Arduino Pin   | Notes                           |
-|------------------|---------------|----------------------------------|
-| Ultrasonic VCC   | 5V            | Power                            |
-| Ultrasonic GND   | GND           | Ground                           |
-| Ultrasonic TRIG  | D9            | Can be changed in code           |
-| Ultrasonic ECHO  | D10           | Can be changed in code           |
-| Servo Motor PWM  | D6            | Servo control signal             |
-| Servo VCC        | 5V            | Use external 5V if needed        |
-| Servo GND        | GND           | Common ground with Arduino       |
+| Component       | Arduino Pin | Notes                      |
+| --------------- | ----------- | -------------------------- |
+| Ultrasonic VCC  | 5V          | Power                      |
+| Ultrasonic GND  | GND         | Ground                     |
+| Ultrasonic TRIG | D9          | Can be changed in code     |
+| Ultrasonic ECHO | D10         | Can be changed in code     |
+| Servo Motor PWM | D6          | Servo control signal       |
+| Servo VCC       | 5V          | Use external 5V if needed  |
+| Servo GND       | GND         | Common ground with Arduino |
 
 > 💡 Tip: Use a breadboard and jumper wires to keep the connections clean and secure.
 
 ---
 
+## 🔌 Physical View
+
+Mount the HC-SR04 Ultrasonic Sensor on top of the SG90 Servo Motor using rubber bands as shown below. The sensor will scan a 180&deg; field as the servo rotates:
+
+![Physical view](media/physical-view.jpg)
+
+---
+
 ## 📁 Project Structure
+
 ```
 arduino-radar/
-├── arduino/                # Arduino sketch 
-│   └── radar.ino 
-├── python/                 # Python radar display 
+├── arduino/                # Arduino sketch
+│   └── radar.ino
+├── python/                 # Python radar display
 │   ├── radar_plot.py
-│   ├── my-radar.py         # Basic radar plot 
+│   ├── my-radar.py         # Basic radar plot
 │   ├── mock_serial.py
 │   └── requirements.txt
 ├── media/
-│   └── radar_demo.gif
+│   ├── radar_demo.gif
+│   ├── circuit-view.jpg
+│   ├── physical-view.jpg
 ├── README.md
 └── LICENSE
 ```
@@ -75,42 +86,49 @@ Install dependencies:
 cd python
 pip install -r requirements.txt
 ```
+
 Then run the radar UI:
+
 ```
 python radar_plot.py
 ```
+
 For testing without Arduino, use the included `mock_serial.py`.
 
 ---
 
 ## 🎯 Features
-Real-time radar-style sweep animation
 
-Green dots for normal detections
+- Real-time radar-style sweep animation
 
-Red dots for close objects (< THRESHOLD_DISTANCE)
+- Green dots for normal detections
 
-Audible beep alert for close-range detection
+- Red dots for close objects (< THRESHOLD_DISTANCE)
 
-Text overlay of distance and angle
+- Audible beep alert for close-range detection
 
-Captures frames and saves output as a .gif for demonstrations
+- Text overlay of distance and angle
+
+- Captures frames and saves output as a .gif for demonstrations
 
 ---
 
 ## ⚙️ Customization
-Change sweep speed, fade time, or detection threshold in `radar_plot.py`
 
-Modify sound settings based on your OS
+- Change sweep speed, fade time, or detection threshold in `radar_plot.py`
 
-Replace MockSerial with actual Serial port for real data
+- Modify sound settings based on your OS
+
+- Replace MockSerial with actual Serial port for real data
 
 ---
 
 ## 📜 License
+
 GNU GENERAL PUBLIC LICENSE (Version 3, 29 June 2007)
 
 ---
 
 ## 💡 Inspired By
+
 This project was built as a fun DIY radar visualization using basic electronics and Python.
